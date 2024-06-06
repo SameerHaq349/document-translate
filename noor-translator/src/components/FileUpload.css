@@ -1,0 +1,23 @@
+.select-file {
+   
+ 
+   
+    display: flex;
+    justify-content: center;
+  
+    background-color: black;
+   
+}
+
+.input {
+    
+    margin:0;
+    padding: 0;
+    justify-self: center;
+    border-color: white;
+    border-style: dashed;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
