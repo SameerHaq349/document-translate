@@ -40,3 +40,9 @@ downloaded_image.jpg
 edited_image.jpg
 
 edited_image.png
+
+node_modules/
+
+build/
+
+*.env
