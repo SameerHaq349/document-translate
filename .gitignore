@@ -27,11 +27,13 @@ yarn-error.log*
 
 uploads/
 
-venv/
+env/
 
 credentials.json
 
 token.json
+
+application_default_credentials.json
 
 __pycache__/
 
@@ -47,6 +49,8 @@ build/
 
 *.env
 
-/venv
+/env
 
 Dockerfile
+
+google-cloud-sdk/
