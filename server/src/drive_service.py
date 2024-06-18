@@ -37,7 +37,7 @@ def download_file_from_drive(file_id):
     creds = get_creds()
     drive_service = build("drive", "v3", credentials=creds)
     #request = drive_service.files().export_media(fileId=file_id, mimeType="application/vnd.openxmlformats-officedocument.presentationml.presentation")
-    drive_service.permissions().create(file_id,body={"type": "anyone", "role":"reader"})
+    drive_service.permissions().create(fileId=file_id,body={"type": "anyone","value":"anyone", "role":"reader"}).execute()
     request = drive_service.files().get(fileId=file_id).execute()
     link_id = request['id']
     link = "docs.google.com/presentation/d/" + link_id + "/export/pptx"
