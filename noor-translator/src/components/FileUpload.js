@@ -14,7 +14,7 @@ const FileUpload = () => {
             const fetchLanguages = async () => {
 
                 try {
-                    const url = 'http://127.0.0.1:5000/languages';
+                    const url = 'https://translation-smashbyz2q-uc.a.run.app/languages';
                     const response = await fetch(url);
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
@@ -40,7 +40,7 @@ const FileUpload = () => {
     };
 
     const handleClick = async () => {
-        const url = 'http://127.0.0.1:5000';
+        const url = 'https://translation-smashbyz2q-uc.a.run.app';
         const formData = new FormData();
         formData.append('file', file);
         formData.append('languageCode', languageCode)
