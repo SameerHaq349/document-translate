@@ -70,3 +70,7 @@ def get_image_link(file_id):
     drive_service.permissions().create(fileId=file_id, body=permission).execute()
     file = drive_service.files().get(fileId=file_id, fields='webViewLink, webContentLink').execute()
     return file.get('webContentLink')
+
+
+
+get_creds()
