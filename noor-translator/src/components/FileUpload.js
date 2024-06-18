@@ -14,7 +14,7 @@ const FileUpload = () => {
             const fetchLanguages = async () => {
 
                 try {
-                    const url = 'https://slidetranslate-smashbyz2q-uc.a.run.app/languages';
+                    const url = 'https://slidetranslator-smashbyz2q-uc.a.run.app/languages';
                     const response = await fetch(url);
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
@@ -40,7 +40,7 @@ const FileUpload = () => {
     };
 
     const handleClick = async () => {
-        const url = 'https://slidetranslate-smashbyz2q-uc.a.run.app';
+        const url = 'https://slidetranslator-smashbyz2q-uc.a.run.app';
         const formData = new FormData();
         formData.append('file', file);
         formData.append('languageCode', languageCode)
