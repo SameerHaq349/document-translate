@@ -3,11 +3,17 @@
 .App {
   text-align: center;
   width: 100vw;
-  height: 100vh;
+  
   margin: 0;
   padding: 0;
+  margin-bottom: 1vw;
 }
 
 .border {
   
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
 }

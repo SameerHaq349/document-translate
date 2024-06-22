@@ -1,0 +1,39 @@
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 17vw;
+    margin-right: 17vw;
+    border: 1px solid #C8D4E2;
+    padding-left: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    margin-top: 1vw;
+    border-radius: 1vw;
+    align-items: center;
+}
+
+.card-container-left {
+    display: flex;
+
+}
+
+.file-name-container {
+    font-size: 1.2vw;
+    margin-left: 1vw;
+
+}
+
+.file-title {
+    display: flex;
+    font-weight: bold;
+    margin-bottom: .5vh;
+}
+
+.file-size {
+    display: flex;
+}
+
+.x {
+    margin-right: 1.5vw;
+    font-size: 1.75vw;
+}

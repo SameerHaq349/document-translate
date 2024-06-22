@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
   
-    background-color: black;
+    
    
 }
 
@@ -21,3 +21,9 @@
     justify-content: center;
 }
 
+.language-selection {
+    border-radius: .5vw;;
+    border-color: #C8D4E2;
+    padding: .5vw;
+   
+}

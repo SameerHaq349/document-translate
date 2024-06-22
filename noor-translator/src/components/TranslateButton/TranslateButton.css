@@ -1,0 +1,22 @@
+.button-template {
+    background-color: #1A67DC;
+    border: none;
+    border-radius: 2vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+    margin-top: 2vw;
+    margin-bottom: 3vw;
+    margin-right: 17vw;
+ 
+    
+}
+
+.button-text {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+
+
+}

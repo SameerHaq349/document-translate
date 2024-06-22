@@ -1,0 +1,23 @@
+.upload-banner {
+    border: 1px solid #C8D4E2;
+    margin-left: 17vw;
+    margin-right: 17vw;
+    border-radius: 1vw;
+    margin-top: 3vh;
+}
+
+.translate-ppt {
+    font-weight: bold;
+    font-size: 3vw;
+    margin-top: 3vw;
+}
+
+.sub-text {
+    font-size: 1.2vw;
+    margin-top: 1vw;    
+    color: #6B6B6B;
+}
+
+.logo {
+    margin-top: 3vh;;
+}

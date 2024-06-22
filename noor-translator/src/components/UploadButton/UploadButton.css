@@ -1,0 +1,30 @@
+.input + .input-label {
+    border: 1px solid #1A67DC;
+    border-radius: 2vw;
+    background-color: #1A67DC;
+    color: white;
+    font-weight:600;
+    font-size: 1.5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    
+    
+}
+
+.input {
+    width: 0.01px;
+    height: 0.01px;
+    opacity: 100%;
+   
+    
+   
+}
+
+.upload-button {
+    margin-top: 4vh;
+    margin-bottom: 7vh;
+   
+}
+

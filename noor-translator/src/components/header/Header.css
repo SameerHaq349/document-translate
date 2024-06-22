@@ -1,0 +1,17 @@
+.Logo {
+    display: flex;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 1vh;
+    
+}
+
+.global-translate {
+    margin-left: 0.3vw;
+    font-weight: bold;
+}
+
+
+.Header {
+border-bottom: 1px solid #C8D4E2;
+}

@@ -83,7 +83,7 @@ const FileUpload = () => {
             </div>
             <div>
                 {buttonAppear ? <a href={"https://" + downloadLink}>download now</a>:<button onClick={handleClick}>Translate</button> }
-                <select name="language" id="language" onChange={handleLanguageSelection}>
+                <select className="language-selection "name="language" id="language" onChange={handleLanguageSelection}>
                     <option key="none" value="none" selected disabled hidden>Select a language</option>
                 {languageArray.map((x) => (
                     <option key={x.name} value={x.language}> {x.name} </option>
@@ -96,3 +96,28 @@ const FileUpload = () => {
 };
 
 export default FileUpload;
+
+
+/*
+nav bar
+- border
+- global translate logo
+- sign in icon
+
+banner
+- image
+- title
+- subtitle
+- choose file button (its own component)
+
+queue
+- download thing
+- translate to (own component)
+- translate button
+- loading thing (own component)
+
+translated documents
+
+download thing - own component
+
+*/
