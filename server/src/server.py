@@ -5,6 +5,10 @@ import traceback
 from drive_service import upload_file_to_drive, download_file_from_drive
 from slides_service import process_presentation
 from translate_service import list_languages
+import ssl
+import certifi
+
+ssl._create_default_https_context = ssl.create_default_context
 
 app = Flask(__name__)
 CORS(app)

@@ -124,10 +124,13 @@ def edit_image(image_path, array, language_name):
         text_size = int(height * (1/1.7))
 
         font_link = filterFonts(language_name)
-        fnt = ImageFont.truetype(font_link,text_size)
+        print("font_link",font_link)
+        fnt = ImageFont.truetype("font",text_size)
         draw.text((0,0), i['translated_text'] , font=fnt, fill=text_color)
-
-        Image.Image.paste(im, translated_segment, (int(i['bbox'][0][0]),int(i['bbox'][0][1]), int(i['bbox'][2][0]), int(i['bbox'][2][1])))
+        try: 
+            Image.Image.paste(im, translated_segment, (int(i['bbox'][0][0]),int(i['bbox'][0][1]), int(i['bbox'][2][0]), int(i['bbox'][2][1])))
+        except ValueError: 
+            continue
     if(im.mode =='RGBA'):
         edited_image_path = "edited_image.png"
     else:

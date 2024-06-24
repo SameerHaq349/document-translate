@@ -1,6 +1,7 @@
 import requests
 from dotenv import load_dotenv
 import os
+from urllib.request import urlretrieve
 
 load_dotenv()
 
@@ -14,17 +15,35 @@ def filterFonts(language):
 
     def filterFunction(x):
         font_object = x
-        print("font object", font_object["family"])
         if language in font_object["family"]:
             return True
         else: 
             return False
 
+    def notoSansFilterFunction(x):
+        noto_font_object = x
+        if language in noto_font_object["family"] and "Noto Sans" in noto_font_object["family"]:
+            return True
+        else:
+            return False
+    noto_sans_filtered_font = list(filter(notoSansFilterFunction, items))
     filtered_fonts = list(filter(filterFunction, items))
-    link_key = next(iter(filtered_fonts[0].get("files")))
-    link = filtered_fonts[0].get("files").get(link_key)
-    return link
+
+    if (len(noto_sans_filtered_font)>0):
+        link = noto_sans_filtered_font[0].get("files").get("regular")
+    else:
+        link = filtered_fonts[0].get("files").get("regular")
+
+    font_request = urlretrieve(link, "font")
+    print("font_request", font_request)
+
+    
+    return font_request
 
 
 
-filterFonts("Arabic")
+    
+
+
+
+
