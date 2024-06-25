@@ -9,7 +9,7 @@ const LanguageSelector = (props) => {
         const fetchLanguages = async () => {
 
             try {
-                const url = 'http://127.0.0.1:5000/languages';
+                const url = 'http://localhost:8080/languages';
                 const response = await fetch(url);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
