@@ -9,7 +9,7 @@ const LanguageSelector = (props) => {
         const fetchLanguages = async () => {
 
             try {
-                const url = 'http://localhost:8080/languages';
+                const url = 'https://slidetranslator-smashbyz2q-uc.a.run.app/languages';
                 const response = await fetch(url);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
