@@ -28,3 +28,7 @@
    
 }
 
+
+.input-label:hover {
+    cursor: pointer;
+}

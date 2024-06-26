@@ -60,3 +60,8 @@
    margin-right: 1vw;
   }
   @keyframes l3 {to{transform: rotate(1turn)}}
+
+
+  .x:hover {
+    cursor: pointer;
+  }
