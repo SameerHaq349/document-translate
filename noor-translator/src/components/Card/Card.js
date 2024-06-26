@@ -48,7 +48,8 @@ const Card = (props) => {
                         </div>
                     </div>
                 </div>
-                {props.downloadButton==true ?  < a href={"https://" + props.downloadLink} className='x'><img src="/Vector.png" className="download-image" ></img></a>:(cancelButton==true ? <div className='x' onClick={cancelSelection}>x</div> : <div></div>)}
+                {props.isDownload==true ? (props.downloadButton==true ?  < a href={"https://" + props.downloadLink} className='x'><img src="/Vector.png" className="download-image" ></img></a>:(cancelButton==true ? <div className='x' onClick={cancelSelection}>x</div> : <div className='loader'></div>)) : (props.downloadButton==true ?  < a href={"https://" + props.downloadLink} className='x'><img src="/Vector.png" className="download-image" ></img></a>:(cancelButton==true ? <div className='x' onClick={cancelSelection}>x</div> : <div></div>))}
+
                 
             </div>
         </div>
