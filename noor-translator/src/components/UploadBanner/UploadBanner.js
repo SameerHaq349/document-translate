@@ -13,7 +13,7 @@ const UploadBanner = (props) => {
                 Translate PowerPoint
             </div>
             <div className='sub-text'>
-                Drag and drop a PowerPoint file here to translate it to a language of your choice
+                Upload a PowerPoint file here to translate it to a language of your choice
             </div>
             <div>
                 <UploadButton setFileTwo={props.setFileOne}></UploadButton>
