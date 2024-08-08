@@ -22,7 +22,7 @@ function App() {
     console.log(language)
     console.log(file)
     setLoadingCard(true)
-    const url = 'https://slidetranslator-smashbyz2q-uc.a.run.app';
+    const url = 'https://docutranslate-smashbyz2q-uw.a.run.app';
     const formData = new FormData();
     formData.append('file', file);
     formData.append('languageCode', languageCode)
