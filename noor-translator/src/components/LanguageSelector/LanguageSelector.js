@@ -9,7 +9,7 @@ const LanguageSelector = (props) => {
         const fetchLanguages = async () => {
 
             try {
-                const url = 'https://docutranslate-smashbyz2q-uw.a.run.app';
+                const url = 'https://docutranslate-smashbyz2q-uw.a.run.app/languages';
                 const response = await fetch(url);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
