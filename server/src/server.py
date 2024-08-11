@@ -1,4 +1,4 @@
-from flask import Flask, request, send_file, jsonify
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
 import traceback
@@ -23,17 +23,15 @@ def upload_file():
         return jsonify({'error': 'No file part'}), 400
 
     file = request.files['file']
-    languageCode = request.form['languageCode']
-    languageName = request.form['language']
-  
-    
-   
+    languageCode = request.form.get('languageCode', '')
+    languageName = request.form.get('language', '')
+
     if file.filename == '':
         return jsonify({'error': 'No selected file'}), 400
 
     if file:
         try:
-            file_path = os.path.join("uploads", file.filename)
+            file_path = os.path.join(UPLOAD_FOLDER, file.filename)
             file.save(file_path)
 
             # Upload and process the file
@@ -42,7 +40,7 @@ def upload_file():
             final_file, filename = download_file_from_drive(file_id)
 
             if final_file:
-                return {"link":final_file}
+                return jsonify({"link": final_file})
             else:
                 return jsonify({'error': 'Failed to upload file to Google Drive'}), 500
         except Exception as e:
@@ -52,8 +50,12 @@ def upload_file():
 
 @app.route("/languages", methods=['GET'])
 def get_languages():
-   languages = list_languages()
-   return languages
+    try:
+        languages = list_languages()
+        return jsonify(languages)
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({'error': 'Failed to fetch languages'}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

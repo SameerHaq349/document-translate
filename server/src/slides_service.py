@@ -125,7 +125,7 @@ def edit_image(image_path, array, language_name):
 
         font_link = filterFonts(language_name)
         print("font_link",font_link)
-        fnt = ImageFont.truetype("font",text_size)
+        fnt = ImageFont.truetype(font_link,text_size)
         draw.text((0,0), i['translated_text'] , font=fnt, fill=text_color)
         try: 
             Image.Image.paste(im, translated_segment, (int(i['bbox'][0][0]),int(i['bbox'][0][1]), int(i['bbox'][2][0]), int(i['bbox'][2][1])))
@@ -137,5 +137,3 @@ def edit_image(image_path, array, language_name):
         edited_image_path = "edited_image.jpg"
     im.save(edited_image_path)
     return edited_image_path
-
-
