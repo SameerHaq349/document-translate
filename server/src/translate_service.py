@@ -1,7 +1,27 @@
 from google.cloud import translate_v2 as translate
-from openai import OpenAI
+import deepl
 from dotenv import load_dotenv
+import os
 
+load_dotenv()
+'''
+translator = deepl.Translator(os.getenv("DEEPL_API_KEY"))
+
+def first_translation(first_iteration, target_language):
+    result = translator.translate_text(first_iteration, target_lang=target_language)
+
+    return result.text
+
+def translate_text(text, target_language):
+    print("text", text)
+    print("target", target_language)
+    result = translator.translate_text(text, target_lang=target_language)
+
+    final_result = first_translation(result.text, target_language)
+
+    return final_result
+    '''
+'''
 load_dotenv()
 
 def translate_text(text, target_language):
@@ -28,9 +48,9 @@ def list_languages():
     
     return results
 
-
-
 '''
+
+
 def translate_text(text, target_language):
     translate_client = translate.Client()
     result = translate_client.translate(text, target_language)
@@ -42,5 +62,3 @@ def list_languages():
     results = translate_client.get_languages()
     
     return results
-
-'''

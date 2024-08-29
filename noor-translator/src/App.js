@@ -43,6 +43,7 @@ function App() {
 };
 
 const downloadButton = (link) => {
+  console.log(link)
   setButtonAppear(true)
   setDownloadLink(link)
 }
@@ -72,3 +73,17 @@ const printHi = () => {
 
 export default App;
 
+
+
+
+/*
+Abkhaz
+Acehnese
+Acholi Afar
+Alur
+Avar
+Awadhi
+Balinese
+
+
+*/
