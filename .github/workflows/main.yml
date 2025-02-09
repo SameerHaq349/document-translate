@@ -1,0 +1,9 @@
+on:
+  workflow_dispatch:
+jobs:
+  my_job:
+    name: see git object
+    runs-on: ubuntu-22.04
+    steps:
+      - name: echo git
+        run: echo ${{ toJson(github) }}
