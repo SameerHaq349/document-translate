@@ -22,7 +22,7 @@ function App() {
     console.log(language)
     console.log(file)
     setLoadingCard(true)
-    const url = 'https://docutranslate-smashbyz2q-uw.a.run.app';
+    const url = 'http://127.0.0.1:5000';
     const formData = new FormData();
     formData.append('file', file);
     formData.append('languageCode', languageCode)
@@ -43,6 +43,7 @@ function App() {
 };
 
 const downloadButton = (link) => {
+  console.log(link)
   setButtonAppear(true)
   setDownloadLink(link)
 }
@@ -72,3 +73,17 @@ const printHi = () => {
 
 export default App;
 
+
+
+
+/*
+Abkhaz
+Acehnese
+Acholi Afar
+Alur
+Avar
+Awadhi
+Balinese
+
+
+*/

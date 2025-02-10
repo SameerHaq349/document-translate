@@ -1,7 +1,7 @@
 import requests
 from dotenv import load_dotenv
 import os
-from urllib.request import urlretrieve
+from urllib.request import urlopen
 
 load_dotenv()
 
@@ -34,16 +34,9 @@ def filterFonts(language):
     else:
         link = filtered_fonts[0].get("files").get("regular")
 
-    font_request = urlretrieve(link, "font")
+    font_request = urlopen(link)
     print("font_request", font_request)
 
     
     return font_request
-
-
-
-    
-
-
-
 
